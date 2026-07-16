@@ -1,17 +1,16 @@
 class Solution {
-    public int findNumbers(int[] nums) {
-        int count=0;
-        for(int i=0;i<nums.length;i++){
-            int digits=0;
-            int num = nums[i];
-            while(num!=0){
-                num /=10;
-                digits++;
-            }
-            if( digits % 2 == 0){
-              count++;
-            }
-        }
-        return count;
+    public boolean isPalindrome(int x) {
+        if (x<0)
+        return false;
+    int original = x;
+    int reverse = 0;
+    while (x>0){
+        reverse = reverse * 10 + (x%10);
+        x = x / 10;
+    }
+     if (original == reverse)
+          return true;
+      else
+          return false; 
     }
 }
