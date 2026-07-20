@@ -9,7 +9,6 @@ class Solution {
             if (c == '(' || c == '{' || c == '[') {
                 stack.push(c);
             } else {
-                // If it's a closing bracket, check stack
                 if (stack.isEmpty()) return false;
                 char top = stack.pop();
                 if ((c == ')' && top != '(') ||
@@ -19,8 +18,6 @@ class Solution {
                 }
             }
         }
-        
-        // Valid only if stack is empty at the end
         return stack.isEmpty();
     }
 }
