@@ -5,7 +5,6 @@ class Solution {
         Stack<Character> stack = new Stack<>();
         
         for (char c : s.toCharArray()) {
-            // If it's an opening bracket, push to stack
             if (c == '(' || c == '{' || c == '[') {
                 stack.push(c);
             } else {
